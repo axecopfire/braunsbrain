@@ -1,3 +1,45 @@
-img {
-    width: 300px;
+header {
+    grid-area: header;
+}
+.main {
+    grid-area: main;
+    background-color: red;
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: blue;
+}
+footer {
+    grid-area: footer;
+    background-color: orange;
+}
+
+body {
+    width: 100%;
+}
+.cont {
+    display: grid;
+    grid-template-columns: 66% 33%;
+    grid-template-areas:
+        "header header"
+        "main sidebar"
+        "footer footer";
+    grid-gap: 10px;
+}
+
+.devicon {
+    font-size: 10rem;
+}
+
+/*** MEDIA QUERIES ***/
+
+@media (max-width: 600px) {
+    .cont {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+    }
 }
