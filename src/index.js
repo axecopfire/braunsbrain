@@ -24,8 +24,3 @@ class App extends Component {
     );
   }
 };
-
-Meteor.startup(() => {
-  ReactDOM.render(<App />, document.querySelector('.container'));
-
-});
